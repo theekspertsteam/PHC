@@ -590,13 +590,12 @@ Seien Sie unter den Ersten, die von unserer innovativen Betreuung profitieren</p
   {/* Cards Section */}
   <div className="flex justify-between gap-[40px] w-full">
     {/* Card 1 */}
-    <div className="flex flex-col items-center text-center p-[10px]rounded-[20px] ">
+    <div className="flex flex-col items-center text-center p-[10px] rounded-[20px] ">
       <img
         src="/images/Link.png"
         alt="Familien"
         className="w-[352px] h-[352px] object-cover rounded-[20px]"
       />
-    
     </div>
 
     {/* Card 2 */}
@@ -650,7 +649,7 @@ Seien Sie unter den Ersten, die von unserer innovativen Betreuung profitieren</p
     {/* Card 1 */}
     <div className="flex flex-col items-center text-center py-[2px] rounded-[20px] ">
       <img
-        src="/images/Link.png"
+        src="/images/Foto1.png"
         alt="Familien"
         className="w-full h-full object-cover rounded-[20px]"
       />
@@ -660,7 +659,7 @@ Seien Sie unter den Ersten, die von unserer innovativen Betreuung profitieren</p
     {/* Card 2 */}
     <div className="flex flex-col items-center text-center py-[2px] rounded-[20px] ">
       <img
-        src="/images/Link (1).png"
+        src="/images/Foto2.png"
         alt="Senioren"
         className="w-full h-full object-cover rounded-[20px]"
       />
@@ -670,7 +669,7 @@ Seien Sie unter den Ersten, die von unserer innovativen Betreuung profitieren</p
     {/* Card 3 */}
     <div className="flex flex-col items-center text-center py-[2px] rounded-[20px] ">
       <img
-        src="/images/Link (2).png"
+        src="/images/Foto3.png"
         alt="Berufstätige"
         className="w-full h-full object-cover rounded-[20px]"
       />
