@@ -25,6 +25,34 @@ export default function FormPage01() {
        alert("Only PDF files are allowed.");
      }
    };
+   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleClick = async () => {
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append("region", formData.region);
+      formDataToSend.append("name", formData.name);
+      formDataToSend.append("email", formData.email);
+      formDataToSend.append("questions", formData.questions);
+  
+      if (formData.cv) {
+        formDataToSend.append("cv", formData.cv, formData.cv.name);
+      }
+  
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        body: formDataToSend,
+      });
+  
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        console.error("Error submitting form");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
   
   return (
     <div className=" bg-[#F1F1F1] flex flex-col items-center justify-center p-4">
@@ -262,33 +290,21 @@ Wähle deine gewünschte<br></br> Region in der du arbeiten<br></br> möchtest u
         </label>
 </div>
 
-      {/* Submit Button */}
-      <Link href={isFormValid ? "/Form-Page-2" : "#"}>
-  <button
-    type="button"
-    disabled={!isFormValid}
-
-    className={`${
-      isFormValid
-        ? "bg-[#04436F] text-[#F5F5F5]"
-        : "bg-gray-400 text-gray-200"
-    } font-metropolis font-[700] text-[24px] md:text-[36px] leading-[21.6px] rounded-[8px] md:rounded-full mt-[50px]`}
-    style={{
-      display: "inline-flex",
-      padding: "18px 50px",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      lineHeight: "21.6px", // Explicit line height
-      cursor: isFormValid ? "pointer" : "not-allowed",
-
-    }}
-  >
-    Weiter geht's!
-  </button>
-</Link>
-
-
+<div className="container flex justify-center items-center mt-[50px]">
+      {!isSubmitted ? (
+        <button
+          type="button"
+          className="bg-[#04436F] text-[#F5F5F5] font-metropolis font-bold text-[24px] lg:text-[32px] leading-[21.6px] rounded-[8px] lg:rounded-full px-8 py-4 mb-[150px]"
+          onClick={handleClick} // Trigger state change on click
+        >
+          Senden
+        </button>
+      ) : (
+        <p className="text-[#04436F] font-metropolis font-[500] lg:font-[500] text-[24px] lg:text-[45px] leading-[26.2px] lg:leading-[50.2px] text-center mt-[40px] mb-[160px]">
+          Vielen Dank - Wir melden uns so schnell wie möglich!
+        </p>
+      )}
+    </div>
     </div>
   );
 }
