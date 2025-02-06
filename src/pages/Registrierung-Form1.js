@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { FormContext } from "../context/FormContext";
 import ServicesGrid from "./Servicesgrid";
 
@@ -17,7 +17,51 @@ export default function FormPage01() {
     setFormData({ ...formData, selectedTopics });
   };
 
-  const isFormValid = handleValidation();
+   const [isSubmitted, setIsSubmitted] = useState(false);
+    
+      const handleInputChange = (e) => {
+        setFormData({ ...formData, additionalQuestion: e.target.value }); // Ruaj pyetjen shtesë
+      };
+    
+      const handleClick = async () => {
+        try {
+          const response = await fetch("/api/send3-4email", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData), // Dërgo të dhënat e formës në API
+          });
+    
+          if (response.ok) {
+            setIsSubmitted(true);
+          } else {
+            console.error("Error submitting form");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      };
+
+   const [isFormValid, setIsFormValid] = useState(false);
+     const validateForm = () => {
+       return (
+         formData.region &&
+         formData.name &&
+         emailRegex.test(formData.email) &&
+         formData.cv
+       );
+     };
+     useEffect(() => {
+       setIsFormValid(validateForm());
+     }, [formData]);
+     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     const handleFileChange = (event) => {
+       const file = event.target.files[0];
+       if (file && file.type === "application/pdf") {
+         setFormData({ ...formData, cv: file });
+       } else {
+         alert("Only PDF files are allowed.");
+       }
+     };
   return (
 
     <div className="bg-[#F1F1F1] text-[#B99B5F] min-h-screen p-4">
@@ -255,22 +299,20 @@ Wählen Sie die gewünschte <br></br>Region und geben Sie<br></br>Ihre E-Mail Ad
           ))}
         </div>
         <div className="flex justify-center mt-10">
-        <Link href={isFormValid ? "/Form-Page-4" : "#"}>
-        <button
-            disabled={!isFormValid}
 
-            className={`${
-                isFormValid
-                  ? "bg-[#04436F] text-[#F5F5F5]"
-                  : "bg-gray-400 text-gray-200"
-              } bg-[#B99B5F] text-white font-bold text-lg lg:text-[36px] lg:leading-[22px] rounded-[8px] lg:rounded-[50px] px-[50px] py-[14px]`}
-              style={{
-                fontFamily: "Metropolis",
-              }}
-            >
-              Weiter geht's!
-            </button>
-          </Link>
+        {!isSubmitted ? (
+        <button
+          type="button"
+          className="bg-[#B99B5F] text-[#F5F5F5] font-metropolis font-bold text-[24px] lg:text-[20px] leading-[21.6px] rounded-[8px] lg:rounded-full px-8 py-4"
+          onClick={handleClick} // Trigger state change on click
+        >
+          Senden
+        </button>
+      ) : (
+        <p className="text-[ #B99B5F] font-metropolis font-[500] lg:font-[500] text-[24px] lg:text-[45px] leading-[26.2px] mt-[50px] lg:leading-[50.2px] text-center">
+          Vielen Dank - Wir melden uns so schnell wie möglich!
+        </p>
+      )}
         </div>
       </div>
 
