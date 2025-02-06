@@ -7,13 +7,18 @@ const FormPage4 = () => {
     const { formData, setFormData } = useContext(FormContext); // Merr të dhënat nga FormContext
     const [isSubmitted, setIsSubmitted] = useState(false);
   
+
+     
     const handleInputChange = (e) => {
-      setFormData({ ...formData, additionalQuestion: e.target.value }); // Ruaj pyetjen shtesë
+      setFormData((prevData) => ({
+        ...prevData,
+        [e.target.name]: e.target.value,
+      }));
     };
-  
+
     const handleClick = async () => {
       try {
-        const response = await fetch("/api/send3-4email", {
+        const response = await fetch("/api/send34email", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData), // Dërgo të dhënat e formës në API
@@ -88,7 +93,7 @@ const FormPage4 = () => {
       {/* Section 1: Logo and Zuruk */}
       <section className="lg:block hidden lg:flex justify-center items-center pt-[25px] md:pt-[25px]">
       <div className="absolute top-6 left-4 lg:left-[170px]">
-        <Link href="/Form-page-3">
+        <Link href="/Registrierung-Form1">
           <button
             className="text-white text-[16px] font-[400] inline-flex items-center px-4 py-2 mt-[40px] "
             style={{
@@ -164,7 +169,7 @@ const FormPage4 = () => {
         </div>
 
         <div className="mb-[16px] flex justify-center">
-        <Link href="/Form-page-3">
+        <Link href="/Registrierung-Form1">
       <p
   className="inline-flex items-center justify-center flex-col px-4 py-2 mt-[40px]"
   style={{
@@ -242,14 +247,25 @@ const FormPage4 = () => {
             Haben Sie noch weitere Fragen?
                 </h2>
                 {!isSubmitted && (
+                  <>
+                   <input
+                type="email"
+                name="email"
+                value={formData.email} // Merr pyetjen nga FormContext
+                onChange={handleInputChange} // Përditëso FormContext
+                placeholder="Ihre E-Mail Adresse"
+                className="text-center focus:outline-none text-[#B99B5F] w-full lg:w-[890px] px-4 py-4 border rounded-[20px] mb-4 placeholder:text-[#B99B5F] placeholder:font-metropolis placeholder:text-[20px] placeholder:font-light placeholder:leading-[26px]"
+                /> 
                 <input
                 type="text"
+                name="additionalQuestion"
                 value={formData.additionalQuestion} // Merr pyetjen nga FormContext
                 onChange={handleInputChange} // Përditëso FormContext
                 placeholder="Hier Ihre Fragen eintippen"
                 className="text-center focus:outline-none text-[#B99B5F] w-full lg:w-[890px] px-4 py-4 border rounded-[20px] mb-4 placeholder:text-[#B99B5F] placeholder:font-metropolis placeholder:text-[20px] placeholder:font-light placeholder:leading-[26px]"
-                />     )}
-
+                />         
+</>
+)}
         <br />
    <div className="lg:min-w-[1280px] flex justify-center items-center">
       {!isSubmitted ? (
@@ -261,7 +277,7 @@ const FormPage4 = () => {
           Senden
         </button>
       ) : (
-        <p className="text-[ #B99B5F] font-metropolis font-[600] lg:font-[700] text-[24px] lg:text-[50px] leading-[26.2px] lg:leading-[50.2px] text-center">
+        <p className="text-[ #B99B5F] font-metropolis font-[500] lg:font-[500] text-[24px] lg:text-[45px] leading-[26.2px] lg:leading-[50.2px] text-center">
           Vielen Dank - Wir melden uns so schnell wie möglich!
         </p>
       )}
