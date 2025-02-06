@@ -64,7 +64,7 @@ export default function Home() {
                         "Betreuung mit Herz – Flexibel, digital, genau<br></br> nach deinem Zeitplan!"
                         </p>
 
-                        <Link href="/Form-Page-1">
+                        <Link href="/Registrierung-Jobs-Form1">
                             <button
                                 className="mt-[6px] font-metropolis flex flex-col items-center text-center font-metropolis text-[18px] font-[500] leading-[21.6px] rounded-[50px] px-[20px] py-[12px] bg-primaryButton transition-all duration-0"
                             >
@@ -107,11 +107,11 @@ export default function Home() {
   </div>
 
   {/* Background Image */}
-  <div className="absolute w-[392px] md:w-auto h-[625px] mt-[70px]">
+  <div className="absolute w-full md:w-auto h-[625px] mt-[70px]">
     <img
       src="/images/mobile2.png"
       alt="Hero Image"
-      className="rounded-[20px] bg-[#F1F1F1] w-[392px] md:w-[1000px] md:h-[725px]"
+      className="rounded-[20px] bg-[#F1F1F1]  md:w-[1000px] md:h-[725px]"
     />
   </div>
 
@@ -133,7 +133,7 @@ export default function Home() {
       <p className="lg:hidden block text-[20px] font-[400] leading-[20px] text-[#F1F1F1] px-2 ">
       "Betreuung mit Herz – Flexibel,<br></br> digital, genau nach deinem Zeitplan!"      </p>
 
-      <Link href="/Form-Page-1">
+      <Link href="/Registrierung-Jobs-Form1">
                             <button
                                 className="font-metropolis flex flex-col items-center text-center font-metropolis text-[18px] font-[500] leading-[21.6px] rounded-[15px] mt-[32px] px-[20px] py-[12px] bg-primaryButton transition-all duration-0"
                             >
@@ -149,7 +149,7 @@ export default function Home() {
    style={{
      backgroundImage: "url('/images/White Box 1280.png')", 
      marginLeft: 'auto', 
-     width:'1270px',
+     width: "100%", maxWidth: "1270px", minWidth: "1000px",
      backgroundRepeat: 'no-repeat', // Prevents the image from repeating
      marginRight: 'auto',
    }}
@@ -175,7 +175,7 @@ export default function Home() {
   </p>
 
   {/* Button */}
-  <Link href="/Form-Page-1">
+  <Link href="/Registrierung-Jobs-Form1">
   <button
     className="mt-[40px] px-8 py-3 text-white font-metropolis text-[18px] font-medium leading-[21.6px] bg-[#04436F] rounded-full"
     style={{
@@ -220,7 +220,7 @@ Werde Teil unseres Teams und gestalte <br></br> Betreuung neu.  </p>
 
   {/* Button Section */}
   <div className="flex flex-col items-center justify-center px-[2px] ">
-  <Link href="/Form-Page-1">
+  <Link href="/Registrierung-Jobs-Form1">
     <button
       className="md:py-[12px] md:px-[20px] text-[18px] font-[500] text-white bg-[#04436F] rounded-[10px] px-[20px] py-[12px] "
       style={{
@@ -253,13 +253,13 @@ Werde Teil unseres Teams und gestalte <br></br> Betreuung neu.  </p>
                     </h1>
 
                     {/* Paragraph */}
-                    <p className="lg:block hidden lg:min-w-[1240px] text-center font-metropolis text-[16px] md:text-[24px] font-[400] leading-[25px] md:leading-[40px] max-w-[800px]">
+                    <p className="lg:block hidden lg:max-w-[1240px] text-center font-metropolis text-[16px] md:text-[24px] font-[400] leading-[25px] md:leading-[40px] max-w-[800px]">
                     Prime Home Care AG ist die erste volldigitale Plattform in der Schweiz, die Betreuung und Technologie <br></br> verbindet. Als Betreuungsperson hilfst du Familien, Senioren und Menschen im Alltag – flexibel und genau<br></br> dann, wann sie dich brauchen.                     </p>
                     <p className="lg:hidden block lg:min-w-[1240px] text-center font-metropolis text-[16px] lg:text-[24px] font-[400] leading-[25px] lg:leading-[40px] max-w-[800px]">
                         Prime Home Care AG ist die erste volldigitale Plattform in der Schweiz, die Betreuung und Technologie verbindet. Als Betreuungsperson hilfst du Familien, Senioren und Menschen im Alltag – flexibel und genau dann, wann sie dich brauchen.
                     </p>
 
-                    <div className="lg:block hidden lg:flex gap-6 mt-[60px] lg:min-w-[1280px]">
+                    <div className="lg:block hidden lg:flex gap-6 mt-[60px] lg:max-w-[1280px]">
                             {/* Card 1 */}
                             <div
                                 className="flex flex-col justify-start items-start bg-cover bg-no-repeat rounded-[20px] p-[40px] w-1/3 h-[370px]"
@@ -423,7 +423,7 @@ Werde Teil unseres Teams und gestalte <br></br> Betreuung neu.  </p>
                         Wen suchen wir?
                     </h2>
                         {/* Subtitle */}
-                        <p className="text-[#04436F] font-metropolis text-[24px] font-normal leading-[40px] w-[687px]">
+                        <p className="text-[#04436F] font-metropolis text-[24px] font-normal leading-[40px] w-[697px]">
                         Wir suchen engagierte Menschen, die Betreuung mit Leidenschaft und Herz leisten möchten. 
                     </p>
 
@@ -724,6 +724,7 @@ Werde Teil unseres Teams und gestalte <br></br> Betreuung neu.  </p>
   style={{
     backgroundColor: "#04436F",
     borderRadius: "20px",
+    width: "100%", maxWidth: "1244px", minWidth: "990px" ,
   }}
 >
   {/* Title Section */}
@@ -801,7 +802,7 @@ Werde Teil unseres Teams und gestalte <br></br> Betreuung neu.  </p>
 
   {/* Bottom Section */}
   <div
-  className="flex flex-col justify-center items-center gap-[10px] w-[1000px] h-[72px] md:p-[10px] rounded-[20px] bg-white flex-shrink-0"
+  className="flex flex-col justify-center items-center gap-[10px] w-[990px] h-[72px] md:p-[10px] rounded-[20px] bg-white flex-shrink-0"
 >
   <p className="text-[#04436F] text-center font-metropolis text-[24px] font-[600] leading-[71.5px]">
     Arbeiten mit Prime Home Care bedeutet, Freiheit und Erfüllung zu verbinden.
@@ -905,7 +906,7 @@ Werde Teil unseres Teams und gestalte <br></br> Betreuung neu.  </p>
 </div>
 </section>
 
-<section className="flex lg:flex-row flex-col justify-between items-center lg:w-[1204px] mx-auto mb-[160px] mt-[160px]">
+<section className="flex lg:flex-row flex-col justify-between items-center lg:max-w-[1204px]  mx-auto mb-[160px] mt-[160px]">
   {/* Left Content */}
   <div className="flex flex-col gap-4 max-w-[380px] md:max-w-[730px]">
     {/* Top Label */}
@@ -1445,7 +1446,7 @@ Werde Teil unseres Teams und gestalte <br></br> Betreuung neu.  </p>
    style={{
      backgroundImage: "url('/images/White Box 1280.png')", 
      marginLeft: 'auto', 
-     width:'1270px',
+     width: "100%", maxWidth: "1270px", minWidth: "1000px",
      backgroundRepeat: 'no-repeat', // Prevents the image from repeating
      marginRight: 'auto',
    }}
@@ -1471,7 +1472,7 @@ Werde Teil unseres Teams und gestalte <br></br> Betreuung neu.  </p>
   </p>
 
   {/* Button */}
-  <Link href="/Form-Page-1">
+  <Link href="/Registrierung-Jobs-Form1">
   <button
     className="mt-[40px] px-8 py-3 text-white font-metropolis text-[18px] font-medium leading-[21.6px] bg-[#04436F] rounded-full"
     style={{
@@ -1515,7 +1516,7 @@ Werde Teil unseres Teams und gestalte <br></br> Betreuung neu.  </p>
 
   {/* Button Section */}
   <div className="flex flex-col items-center justify-center px-[2px] ">
-  <Link href="/Form-Page-1">
+  <Link href="/Registrierung-Jobs-Form1">
     <button
       className="md:py-[12px] md:px-[20px] text-[18px] font-[500] text-white bg-[#04436F] rounded-[10px] px-[20px] py-[12px] "
       style={{
@@ -1538,10 +1539,11 @@ Werde Teil unseres Teams und gestalte <br></br> Betreuung neu.  </p>
         <section className="lg:block hidden mt-[160px] mb-[120px] lg:flex flex-col justify-center items-center">
         {/* Main Content */}
         <div
-            className="flex justify-between items-start w-[1238px] h-[193px] px-6"
+            className="flex justify-between items-start w-[1238px] h-[193px] px-2"
             style={{
             color: "#04436F",
             fontFamily: "Metropolis",
+            width: "100%", maxWidth: "1238px", minWidth: "1000px" ,
             }}
         >
             {/* Left Section */}
