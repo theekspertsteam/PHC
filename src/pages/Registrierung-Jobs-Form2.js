@@ -5,20 +5,23 @@ import { FormContext } from "../context/FormContext";
 export default function FormPage02() {
   const { formData, setFormData } = useContext(FormContext);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const handleInputChange = (e) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [e.target.name]: e.target.value,
+    }));
+  };
+  
+  
 
   const handleClick = async () => {
     try {
       const formDataToSend = new FormData();
-      formDataToSend.append("region", formData.region);
-      formDataToSend.append("name", formData.name);
       formDataToSend.append("email", formData.email);
       formDataToSend.append("questions", formData.questions);
+
   
-      if (formData.cv) {
-        formDataToSend.append("cv", formData.cv, formData.cv.name);
-      }
-  
-      const response = await fetch("/api/sendEmail", {
+      const response = await fetch("/api/sendMail", {
         method: "POST",
         body: formDataToSend,
       });
@@ -29,7 +32,7 @@ export default function FormPage02() {
         console.error("Error submitting form");
       }
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Error:", error)
     }
   };
   
@@ -38,7 +41,7 @@ export default function FormPage02() {
       {/* Back Button and Logo */}
       <section className="lg:block hidden lg:flex justify-center items-center pt-[25px] md:pt-[25px]">
         <div className="absolute top-6 left-4 lg:left-[170px]">
-          <Link href="/Form-Page-1">
+          <Link href="/Registrierung-Jobs-Form1">
             <button
               className="text-[#003588] text-[16px] font-[400] inline-flex items-center px-4 py-2 mt-[40px] "
               style={{
@@ -114,7 +117,7 @@ export default function FormPage02() {
           </div>
 
           <div className="mb-[16px] flex justify-center">
-          <Link href="/Form-Page-1">
+          <Link href="/Registrierung-Jobs-Form1">
             <button
               className="text-[#003588] text-[16px] leading-[24px] font-[400] inline-flex items-center px-4 py-2 mt-[40px] "
               style={{
@@ -286,41 +289,53 @@ Du betreust fest zugewiesene Privatkunden in deiner Region. Je nach Bedarf kann 
       </section>
 
       {/* Footer Section */}
-      <div className="flex flex-col items-center mt-[160px] gap-4">
-        <h1
-          className="text-[#04436F] font-metropolis font-[600] lg:font-[700] text-[24px] lg:text-[55px] leading-[55.2px] text-center"
-          style={{
-            letterSpacing: "-0.96px",
-          }}
-        >
-          Hast du noch Fragen?
-        </h1>
-        {!isSubmitted && (
-        <input
-          type="text"
-          placeholder="Deine Fragen eintippen"
-          className="flex flex-col items-start self-stretch text-center border-[1px] rounded-[20px] border-[#B7B6BA6A] p-[20px] placeholder:text-[#04436F] text-[#04436F] font-metropolis text-[20px] font-light leading-[26px] w-full lg:w-[826px] bg-transparent focus:outline-none"
-          value={formData.questions}
-          onChange={(e) => setFormData({ ...formData, questions: e.target.value })}
-          />
-)}
+      <section className="text-center mt-[160px] mb-[160px] gap-6">
+  <h2 className="text-[#04436F] text-center font-metropolis text-[24px] lg:text-[55px] font-semibold leading-[71.5px] md:mb-4">
+  Hast du noch Fragen?
+  </h2>
 
-<div className="container flex justify-center items-center">
-      {!isSubmitted ? (
-        <button
-          type="button"
-          className="bg-[#04436F] text-[#F5F5F5] font-metropolis font-bold text-[24px] lg:text-[32px] leading-[21.6px] rounded-[8px] lg:rounded-full px-8 py-4 mb-[150px]"
-          onClick={handleClick} // Trigger state change on click
-        >
-          Senden
-        </button>
-      ) : (
-        <p className="text-[#04436F] font-metropolis font-[600] lg:font-[700] text-[24px] lg:text-[50px] leading-[26.2px] lg:leading-[50.2px] text-center mt-[40px] mb-[160px]">
-          Vielen Dank - Wir melden uns so schnell wie möglich!
-        </p>
-      )}
-    </div>
-      </div>
+  {!isSubmitted && (
+    <>
+      {/* Email Input */}
+      <input
+        type="email"
+        name="email"
+        value={formData.email} 
+        onChange={handleInputChange} // Handle input change
+        // Ensure email is always defined
+        placeholder="Ihre E-Mail Adresse"
+        className="text-center focus:outline-none text-[#04436F] w-full lg:w-[890px] px-4 py-4 border rounded-[20px] mb-4 placeholder:text-[#04436F] placeholder:font-metropolis placeholder:text-[20px] placeholder:font-light placeholder:leading-[26px]"
+      />
+
+      {/* Additional Question Input */}
+      <input
+        type="text"
+        name="questions"
+        value={formData.questions} 
+        onChange={handleInputChange} 
+        placeholder="Deine Fragen eintippen"
+        className="text-center focus:outline-none text-[#04436F] w-full lg:w-[890px] px-4 py-4 border rounded-[20px] mb-4 placeholder:text-[#04436F] placeholder:font-metropolis placeholder:text-[20px] placeholder:font-light placeholder:leading-[26px]"
+      />
+    </>
+  )}
+
+  <br />
+  <div className="lg:min-w-[1280px] flex justify-center items-center">
+    {!isSubmitted ? (
+      <button
+        type="button"
+        className="bg-[#04436F] text-[#F5F5F5] font-metropolis font-bold text-[24px] lg:text-[20px] leading-[21.6px] rounded-[8px] lg:rounded-full px-8 py-4"
+        onClick={handleClick} // Trigger state change on click
+      >
+        Senden
+      </button>
+    ) : (
+      <p className="text-[#04436F] font-metropolis font-[500] lg:font-[500] text-[24px] lg:text-[45px] leading-[26.2px] lg:leading-[50.2px] text-center">
+        Vielen Dank - Wir melden uns so schnell wie möglich!
+      </p>
+    )}
+  </div>
+</section>
     </div>
   );
 }
