@@ -1,11 +1,19 @@
-import "../styles/globals.css";  // This assumes 'styles' is at the root level of 'src'
+import "../styles/globals.css";
 import { FormProvider } from "../context/FormContext";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <FormProvider>
-      <Component {...pageProps} />
-    </FormProvider>
+    <>
+      <Head>
+        <link rel="icon" href="/PHCIcon.svg" type="image/svg+xml" />
+        <link rel="shortcut icon" href="/PHCIcon.svg" type="image/svg+xml" />
+        <title>PHC</title>
+      </Head>
+      <FormProvider>
+        <Component {...pageProps} />
+      </FormProvider>
+    </>
   );
 }
 
