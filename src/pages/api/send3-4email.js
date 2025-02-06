@@ -60,10 +60,6 @@ export default async function handler(req, res) {
               <td style="padding: 10px; border: 1px solid #ddd;"><strong>Ausgewählte Themen:</strong></td>
               <td style="padding: 10px; border: 1px solid #ddd;">${selectedTopics}</td>
             </tr>
-            <tr>
-              <td style="padding: 10px; border: 1px solid #ddd;"><strong>Kommentar:</strong></td>
-              <td style="padding: 10px; border: 1px solid #ddd;">${additionalQuestion}</td>
-            </tr>
           </table>
           <p style="margin-top: 20px; color: #34495e; text-align: center;">Vielen Dank!</p>
         </div>
