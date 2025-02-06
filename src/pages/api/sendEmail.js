@@ -61,10 +61,6 @@ export default async function handler(req, res) {
                 <td style="padding: 10px; border: 1px solid #ddd;"><strong>Region:</strong></td>
                 <td style="padding: 10px; border: 1px solid #ddd;">${region}</td>
               </tr>
-              <tr>
-                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Kommentar:</strong></td>
-                <td style="padding: 10px; border: 1px solid #ddd;">${questions}</td>
-              </tr>
             </table>
             <p style="margin-top: 20px; color: #34495e; text-align: center;">Vielen Dank!</p>
           </div>
@@ -107,3 +103,4 @@ export default async function handler(req, res) {
     res.status(405).json({ error: 'Method not allowed' });
   }
 }
+
