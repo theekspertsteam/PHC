@@ -108,7 +108,7 @@ export default function Home() {
   </div>
 
   {/* Background Image */}
-  <div className="absolute w-[378px] md:w-auto h-[625px] mt-[70px]">
+  <div className="absolute w-full md:w-auto h-[625px] mt-[70px]">
     <img
       src="/images/New home mobile 2.png"
       alt="Hero Image"
@@ -117,8 +117,8 @@ export default function Home() {
   </div>
 
   <div className="absolute left-0 w-full h-full flex flex-col justify-center items-center text-[#F1F1F1]">
-    <div className="w-[380px] md:w-[430px] text-center ">
-      <p className="mb-[32px] mt-[40px] flex justify-center items-center w-[339px] p-[4px_10px_4px_10px] text-[#F1F1F1] text-[20px] font-[400] leading-[25.6px] border-[1px] border-transparent rounded-[20px] bg-[linear-gradient(93deg,_#000_0%,_rgba(0,_0,_0,_0.30)_100%)] mx-auto">
+    <div className="w-full md:w-[430px] text-center ">
+      <p className="mb-[32px] mt-[40px] flex justify-center items-center w-[330px] p-[4px_10px_4px_10px] text-[#F1F1F1] text-[20px] font-[400] leading-[25.6px] border-[1px] border-transparent rounded-[20px] bg-[linear-gradient(93deg,_#000_0%,_rgba(0,_0,_0,_0.30)_100%)] mx-auto">
         Ab Frühsommer 2025 bringt die
       </p>
 
@@ -158,19 +158,19 @@ export default function Home() {
       {/* Button Section */}
       <div className="flex flex-col md:flex-row justify-center gap-6">
         {/* First Button */}
-        <div className="flex md:flex-col justify-center items-center md:items-start bg-[#04436F] text-white md:w-[350px] lg:w-[608px] h-[143px] md:h-[400px] lg:h-[240px] rounded-[10px] md:rounded-[37px] px-[10px] py-[30px] md:px-[40px] md:py-[52px] gap-4">
+        <div className="flex md:flex-col justify-center items-center md:items-start bg-[#04436F] text-white md:w-[350px] lg:w-[608px] h-[183px] md:h-[400px] lg:h-[270px] rounded-[10px] md:rounded-[37px] px-[10px] py-[30px] md:px-[40px] md:py-[52px] gap-4">
           <p className="text-[24px] md:text-[36px] font-[600] leading-[32px] md:leading-[52px]">
           Bewirb Dich jetzt und werde Teil der Prime Home Care AG
           </p>
           <Link href="/Registrierung-Jobs">
-      <button className="bg-white text-[#04436F] text-[18px] leading-[21px] rounded-[50px] mt-[42px] py-[12px] px-[20px] font-[500]">
+      <button className="bg-white text-[#04436F] text-[18px] leading-[21px] rounded-[50px] flex justify-center items-center mt-0 md:mt-[35px] lg:mt-[42px] py-[12px] px-[20px] font-[500]">
         weiter
       </button>
     </Link>
         </div>
 
         {/* Second Button */}
-        <div className="flex md:flex-col justify-center items-center md:items-start bg-[#B99B5F] text-white md:w-[350px] lg:w-[608px] h-[143px] md:h-[400px] lg:h-[240px] rounded-[10px] md:rounded-[37px] px-[10px] py-[30px] md:px-[40px] md:py-[52px] gap-2">
+        <div className="flex md:flex-col justify-center items-center md:items-start bg-[#B99B5F] text-white md:w-[350px] lg:w-[608px] h-[183px] md:h-[400px] lg:h-[270px] rounded-[10px] md:rounded-[37px] px-[10px] py-[30px] md:px-[40px] md:py-[52px] gap-2">
           <p className="text-[24px] md:text-[36px] font-[600] leading-[32px] md:leading-[52px]">
           Stundenweise Betreuung durch die Prime Home Care AG organisieren
           </p>
@@ -584,19 +584,19 @@ export default function Home() {
       {/* Button Section */}
       <div className="flex flex-col md:flex-row justify-center gap-6">
         {/* First Button */}
-        <div className="flex md:flex-col justify-center items-center md:items-start bg-[#04436F] text-white md:w-[350px] lg:w-[608px]  h-[143px] md:h-[400px] lg:h-[240px] rounded-[10px] md:rounded-[37px] px-[10px] py-[30px] md:px-[40px] md:py-[52px] gap-4">
+        <div className="flex md:flex-col justify-center items-center md:items-start bg-[#04436F] text-white md:w-[350px] lg:w-[608px]  h-[183px] md:h-[400px] lg:h-[270px] rounded-[10px] md:rounded-[37px] px-[10px] py-[30px] md:px-[40px] md:py-[52px] gap-4">
           <p className="text-[24px] md:text-[36px] font-[600] leading-[32px] md:leading-[52px]">
           Bewirb Dich jetzt und werde Teil der Prime Home Care AG
           </p>
           <Link href="/Registrierung-Jobs">
-      <button className="bg-white text-[#04436F] text-[18px] leading-[21px] mt-[42px] rounded-[50px] py-[12px] px-[20px] font-[500]">
+      <button className="bg-white text-[#04436F] text-[18px] leading-[21px] mt-0 md:mt-[35px] lg:mt-[42px] rounded-[50px] py-[12px] px-[20px] font-[500]">
         weiter
       </button>
     </Link>
         </div>
 
         {/* Second Button */}
-        <div className="flex md:flex-col justify-center items-center md:items-start bg-[#B99B5F] text-white md:w-[350px] lg:w-[608px]  h-[143px] md:h-[400px] lg:h-[240px] rounded-[10px] md:rounded-[37px] px-[10px] py-[30px] md:px-[40px] md:py-[52px] gap-2">
+        <div className="flex md:flex-col justify-center items-center md:items-start bg-[#B99B5F] text-white md:w-[350px] lg:w-[608px]  h-[183px] md:h-[400px] lg:h-[270px] rounded-[10px] md:rounded-[37px] px-[10px] py-[30px] md:px-[40px] md:py-[52px] gap-2">
           <p className="text-[24px] md:text-[36px] font-[600] leading-[32px] md:leading-[52px]">
           Stundenweise Betreuung durch die Prime Home Care AG organisieren
           </p>
@@ -613,10 +613,11 @@ export default function Home() {
     <section className="mt-[160px] mb-[130px] lg:block hidden lg:flex flex-col justify-center items-center">
         {/* Main Content */}
         <div
-            className="flex justify-between items-start lg:w-[1238px] h-[193px] px-6"
+            className="flex justify-between items-start lg:w-full h-[193px] px-2"
             style={{
             color: "#04436F",
             fontFamily: "Metropolis",
+            width: "100%", maxWidth: "1238px", minWidth: "1000px" 
             }}
         >
             {/* Left Section */}
@@ -673,7 +674,7 @@ export default function Home() {
             lineHeight: "30.8px", // 128.333%
             }}
         >
-            Kontakt:
+            Kontakt Jobs:
         </h2>
         <p
             className="font-normal"
@@ -684,6 +685,45 @@ export default function Home() {
         >
              <a href="mailto:jobs@phc.ch">
                jobs@phc.ch
+             </a>
+        </p>
+        <p
+            className="font-normal"
+            style={{
+            fontSize: "24px",
+            lineHeight: "30.8px", // 128.333%
+            }}
+        >
+              <a href="https://www.phc.ch" target="_blank" rel="noopener noreferrer">
+                      www.phc.ch
+                    </a>
+        </p>
+        </div>
+        <div
+        className="flex flex-col mt-[14px] items-left text-left gap-8"
+        style={{
+            color: 'black',
+            fontFamily: "Metropolis",
+        }}
+        >
+        <h2
+            className="font-bold"
+            style={{
+            fontSize: "24px",
+            lineHeight: "30.8px", // 128.333%
+            }}
+        >
+            Kontakt Betreuung:
+        </h2>
+        <p
+            className="font-normal"
+            style={{
+            fontSize: "24px",
+            lineHeight: "30.8px", // 128.333%
+            }}
+        >
+             <a href="mailto:info@phc.ch">
+               info@phc.ch
              </a>
         </p>
         <p
@@ -748,7 +788,7 @@ export default function Home() {
     </div>
 
     {/* Right Section */}
-    <div className="flex text-black flex-col text-left gap-8">
+    <div className=" flex text-black flex-col text-left gap-8">
       <h2
         className="font-bold"
         style={{
@@ -756,7 +796,7 @@ export default function Home() {
           lineHeight: "30.8px", // 128.333%
         }}
       >
-        Kontakt:
+        Kontakt Jobs:
       </h2>
       <p
         className="font-normal"
@@ -781,9 +821,44 @@ export default function Home() {
         </a>
       </p>
     </div>
+    <div className="mt-[80px] flex text-black flex-col text-left gap-8">
+      <h2
+        className="font-bold"
+        style={{
+          fontSize: "24px",
+          lineHeight: "30.8px", // 128.333%
+        }}
+      >
+        Kontakt Betreuung:
+      </h2>
+      <p
+        className="font-normal"
+        style={{
+          fontSize: "24px",
+          lineHeight: "30.8px", // 128.333%
+        }}
+      >
+        <a href="mailto:info@phc.ch">
+           info@phc.ch
+        </a>
+      </p>
+      <p
+        className="font-normal"
+        style={{
+          fontSize: "24px",
+          lineHeight: "30.8px", // 128.333%
+        }}
+      >
+         <a href="https://www.phc.ch" target="_blank" rel="noopener noreferrer">
+                      www.phc.ch
+        </a>
+      </p>
+    </div>
   </div>
 </section>
 
     </div>
   );
 }
+
+
