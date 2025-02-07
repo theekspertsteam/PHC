@@ -75,10 +75,9 @@ export default function Home() {
         </div>
 
           </section>
-
-          <section className="lg:hidden block relative lg:max-w-[1300px] h-[800px] mx-auto mt-2">
+<section className="lg:hidden block relative h-[800px] w-full flex flex-col items-center justify-center text-center mx-auto px-4">
   {/* Logo Positioned on Top Center */}
-  <div className="absolute top-0 left-0 right-0 flex justify-center items-center z-10">
+  <div className="absolute top-4 left-0 right-0 flex justify-center z-10">
   <svg xmlns="http://www.w3.org/2000/svg" width="107" height="52" viewBox="0 0 107 52" fill="none">
   <g clip-path="url(#clip0_558_1003)">
     <path d="M87.3323 6.98741C89.547 5.82771 92.1458 5.25078 95.1319 5.25078C96.9359 5.25078 98.6313 5.42561 100.236 5.78109C101.832 6.14532 104.055 6.9204 106.14 7.81494V2.28451C102.659 1.00826 98.9745 0.373047 95.0791 0.373047C91.1837 0.373047 87.6315 1.16852 84.6132 2.75655C81.589 4.35041 79.2512 6.58822 77.5939 9.48747C75.9454 12.378 75.1123 15.726 75.1123 19.511C75.1123 23.2961 75.9454 26.781 77.5939 29.7472C79.2512 32.7135 81.5802 35.0067 84.5838 36.6355C87.5846 38.2585 91.0547 39.0715 94.9735 39.0715C97.4169 39.0715 99.6345 38.8442 101.612 38.4042C103.011 38.0866 104.515 37.5912 106.14 36.9094V31.2479C104.122 32.3551 102.274 33.1214 100.588 33.5469C98.8924 33.9781 97.0063 34.1908 94.9207 34.1908C92.1165 34.1908 89.6203 33.6226 87.4497 32.4746C85.2732 31.3294 83.5689 29.6598 82.3458 27.4657C81.1226 25.2658 80.5125 22.6084 80.5125 19.5052C80.5125 16.5768 81.0933 14.0418 82.2607 11.9176C83.4281 9.79342 85.1265 8.14711 87.3323 6.9845V6.98741Z" fill="#04436F"/>
@@ -108,42 +107,31 @@ export default function Home() {
   </div>
 
   {/* Background Image */}
-  <div className="absolute w-full md:w-auto h-[625px] mt-[70px]">
+  <div className="absolute top-0 w-full h-full flex items-center justify-center">
     <img
       src="/images/New home mobile 2.png"
       alt="Hero Image"
-      className="rounded-[20px] bg-[#F1F1F1] md:w-[1000px] md:h-[725px]"
+      className="rounded-[20px] bg-[#F1F1F1] w-full h-[625px]"
     />
   </div>
 
-  <div className="absolute left-0 w-full h-full flex flex-col justify-center items-center text-[#F1F1F1]">
-    <div className="w-full md:w-[430px] text-center ">
-      <p className="mb-[32px] mt-[40px] flex justify-center items-center min-w-[290px] max-w-[330px] p-[4px_10px_4px_10px] text-[#F1F1F1] text-[20px] font-[400] leading-[25.6px] border-[1px] border-transparent rounded-[20px] bg-[linear-gradient(93deg,_#000_0%,_rgba(0,_0,_0,_0.30)_100%)] mx-auto">
-        Ab Frühsommer 2025 bringt die
-      </p>
+  {/* Text Content */}
+  <div className="relative z-20 w-full max-w-[100%] flex flex-col justify-center items-center text-white">
+    <p className="mt-[60px] mb-4 px-4 py-2 text-[18px] font-medium leading-[22px] bg-[linear-gradient(93deg,_#000_0%,_rgba(0,_0,_0,_0.30)_100%)] bg-opacity-50 rounded-[15px] max-w-[320px]">
+      Ab Frühsommer 2025 bringt die
+    </p>
 
-      <h2 className="md:block hidden mb-[32px] text-[24px] lg:text-[48px] font-[600] lg:leading-[52px]">
-        Prime Home Care AG eine neue Möglichkeit der stündlichen Betreuung bei Ihnen zu Hause an.
-      </h2>
-      <h2 className="md:hidden block mb-[32px] text-[24px] leading-[23px] font-[600]">
-        Prime Home Care AG eine <br /> neue Möglichkeit der <br /> stündlichen Betreuung bei <br /> Ihnen zu Hause an.
-      </h2>
+    <h2 className="text-[22px] font-semibold leading-[26px]">
+      Prime Home Care AG eine <br /> neue Möglichkeit der <br /> stündlichen Betreuung bei <br /> Ihnen zu Hause an.
+    </h2>
 
-      <p
-        className="lg:block w-[663px] hidden text-[20px] font-normal leading-[25.6px] mx-auto text-center"
-        style={{
-          fontFamily: 'Metropolis', // Ensure the custom font is applied
-        }}
-      >
-        Egal, ob Sie selbst Unterstützung benötigen oder für einen Angehörigen suchen – unsere Dienstleistung bietet Ihnen Sicherheit, Entlastung und Flexibilität.
-      </p>
-
-      <p className="lg:hidden block text-[20px] font-[300] leading-[20px] md:leading-[25px] text-[#F1F1F1] px-2 ">
-        Egal, ob Sie selbst Unterstützung<br /> benötigen oder für einen <br />Angehörigen suchen – unsere <br /> Dienstleistung bietet Ihnen<br /> Sicherheit, Entlastung und<br /> Flexibilität.
-      </p>
-    </div>
+    <p className="mt-4 text-[18px] font-light leading-[24px] px-2">
+      Egal, ob Sie selbst Unterstützung<br /> benötigen oder für einen <br />Angehörigen suchen – unsere <br />
+      Dienstleistung bietet Ihnen<br /> Sicherheit, Entlastung und<br /> Flexibilität.
+    </p>
   </div>
 </section>
+
 
 <section className="max-w-[1290px] mx-auto md:mt-[160px] mt-[10px] mb-[160px]">
       {/* Heading Section */}
@@ -158,7 +146,7 @@ export default function Home() {
       {/* Button Section */}
       <div className="flex flex-col md:flex-row justify-center gap-6">
         {/* First Button */}
-        <div className="flex md:flex-col justify-center items-center md:items-start bg-[#04436F] text-white md:w-[350px] lg:w-[608px] h-[183px] md:h-[400px] lg:h-[270px] rounded-[10px] md:rounded-[37px] px-[10px] py-[30px] md:px-[40px] md:py-[52px] gap-4">
+        <div className="flex md:flex-col justify-center items-center md:items-start bg-[#04436F] text-white md:w-[350px] lg:w-[608px] h-[193px] md:h-[400px] lg:h-[270px] rounded-[10px] md:rounded-[37px] px-[10px] py-[30px] md:px-[40px] md:py-[52px] gap-4">
           <p className="text-[24px] md:text-[36px] font-[600] leading-[32px] md:leading-[52px]">
           Bewirb Dich jetzt und werde Teil der Prime Home Care AG
           </p>
@@ -170,7 +158,7 @@ export default function Home() {
         </div>
 
         {/* Second Button */}
-        <div className="flex md:flex-col justify-center items-center md:items-start bg-[#B99B5F] text-white md:w-[350px] lg:w-[608px] h-[183px] md:h-[400px] lg:h-[270px] rounded-[10px] md:rounded-[37px] px-[10px] py-[30px] md:px-[40px] md:py-[52px] gap-2">
+        <div className="flex md:flex-col justify-center items-center md:items-start bg-[#B99B5F] text-white md:w-[350px] lg:w-[608px] h-[193px] md:h-[400px] lg:h-[270px] rounded-[10px] md:rounded-[37px] px-[10px] py-[30px] md:px-[40px] md:py-[52px] gap-2">
           <p className="text-[24px] md:text-[36px] font-[600] leading-[32px] md:leading-[52px]">
           Stundenweise Betreuung durch die Prime Home Care AG organisieren
           </p>
@@ -316,7 +304,7 @@ export default function Home() {
         </div>
 
         {/* Card 3 */}
-        <div className="flex flex-col items-center justify-center md:items-start md:justify-start bg-white p-6 rounded-[20px] h-[350px] md:h-auto">
+        <div className="flex flex-col items-center justify-center md:items-start md:justify-start bg-white p-6 rounded-[20px] h-[400px] md:h-auto">
           {/* Image and Heading Container (same row) */}
           <div className="flex items-center justify-start w-full mb-[16px] md:mb-4 space-x-4">
             {/* Image Container */}
@@ -584,7 +572,7 @@ export default function Home() {
       {/* Button Section */}
       <div className="flex flex-col md:flex-row justify-center gap-6">
         {/* First Button */}
-        <div className="flex md:flex-col justify-center items-center md:items-start bg-[#04436F] text-white md:w-[350px] lg:w-[608px]  h-[183px] md:h-[400px] lg:h-[270px] rounded-[10px] md:rounded-[37px] px-[10px] py-[30px] md:px-[40px] md:py-[52px] gap-4">
+        <div className="flex md:flex-col justify-center items-center md:items-start bg-[#04436F] text-white md:w-[350px] lg:w-[608px]  h-[193px] md:h-[400px] lg:h-[270px] rounded-[10px] md:rounded-[37px] px-[10px] py-[30px] md:px-[40px] md:py-[52px] gap-4">
           <p className="text-[24px] md:text-[36px] font-[600] leading-[32px] md:leading-[52px]">
           Bewirb Dich jetzt und werde Teil der Prime Home Care AG
           </p>
@@ -596,7 +584,7 @@ export default function Home() {
         </div>
 
         {/* Second Button */}
-        <div className="flex md:flex-col justify-center items-center md:items-start bg-[#B99B5F] text-white md:w-[350px] lg:w-[608px]  h-[183px] md:h-[400px] lg:h-[270px] rounded-[10px] md:rounded-[37px] px-[10px] py-[30px] md:px-[40px] md:py-[52px] gap-2">
+        <div className="flex md:flex-col justify-center items-center md:items-start bg-[#B99B5F] text-white md:w-[350px] lg:w-[608px]  h-[193px] md:h-[400px] lg:h-[270px] rounded-[10px] md:rounded-[37px] px-[10px] py-[30px] md:px-[40px] md:py-[52px] gap-2">
           <p className="text-[24px] md:text-[36px] font-[600] leading-[32px] md:leading-[52px]">
           Stundenweise Betreuung durch die Prime Home Care AG organisieren
           </p>
