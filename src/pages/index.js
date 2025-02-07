@@ -497,7 +497,7 @@ export default function Home() {
 
       {/* Button Section */}
       <div className="flex flex-col items-center justify-center p-4 ">
-      <Link href="/Form-Page-1">
+      <Link href="/Registrierung">
         <button className="md:py-[12px] md:px-[30px] text-[16px] lg:text-[18px] font-[500] text-white bg-[#04436F] rounded-[50px] md:mb-[30px] p-2">
           Lassen Sie sich bereits jetzt unverbindlich beraten oder <br /> registrieren Sie sich, um mehr über unser Angebot zu erfahren.
         </button>
@@ -521,7 +521,7 @@ export default function Home() {
 
   {/* Button Section */}
   <div className="flex flex-col items-center justify-center p-4 ">
-    <Link href="/Form-Page-1">
+    <Link href="/Registrierung">
       <button className="md:py-[12px] md:px-[30px] text-[16px] lg:text-[18px] font-[500] text-white bg-[#04436F] rounded-[50px] md:mb-[30px] p-2">
       Lassen Sie sich bereits jetzt unverbindlich beraten oder <br></br>
         registrieren Sie sich, um mehr über unser Angebot zu erfahren.
