@@ -1439,7 +1439,109 @@ Werde Teil unseres Teams und gestalte <br></br> Betreuung neu.  </p>
 
 </section>
 
+<section
+  className="font-montserat rounded-[20px] max-w-[1190px] relative flex flex-col bg-cover mt-[160px] mx-auto"
 
+>
+<h2
+    className="font-metropolis flex items-center justify-center text-[55px] font-semibold leading-[71.5px]"
+    style={{
+      color: "#04436F",
+    }}
+  >
+    Offene Stellen:
+  </h2>
+<h1 class="flex justify-start items-start text-[39px] font-semibold leading-[48px] text-[#04436F] font-[Metropolis] mt-[32px]">
+  Stellenbeschreibung für Mitarbeiter der Prime Home Care AG
+</h1>
+<p class="mt-[16px] text-[16px] font-normal leading-[24px] text-[#04436F] font-[Metropolis]">
+  Betreuung und Begleitung im Alter spielen eine bedeutende Rolle, um die Lebensqualität und Selbstständigkeit von Senioren in der Schweiz zu fördern und zu erhalten. Durch individuelle Unterstützung können die älteren Menschen ihren Alltag meistern, am sozialen Leben teilnehmen und ihre körperliche sowie geistige Gesundheit fördern. In diesem Artikel erfahren Sie, welche Aspekte von Betreuung für Senioren in der Schweiz besonders wichtig sind und wie die Prime Home Care dabei helfen kann, eine passende und individuelle Lösung für Ihre Liebsten zu finden.
+  <br /><br />
+  Eine angemessene Betreuung kann den Senioren dabei helfen, ihre Selbstständigkeit in ihrem gewohnten Umfeld so lange wie möglich zu erhalten. Ziel der Betreuung ist es, den älteren Menschen ein würdevolles Leben zu ermöglichen und ihnen dabei zu helfen, ihre alltäglichen Herausforderungen zu bewältigen. Dabei spielt die Unterstützung im Haushalt eine zentrale Rolle, jedoch geht es auch um gemeinsame Freizeitaktivitäten, Begleitung bei Arztterminen, nächtliche Betreuung, Mobilität im Alter und die psychosoziale Unterstützung.
+</p>
+<div className='mt-[16px] space-y-[16px]'>
+<h1 class="text-[24px] leading-[24px] text-[#04436F] font-[Metropolis] font-normal">
+  <strong class="font-bold">Unternehmen:</strong> Prime Home Care AG
+</h1>
+<h1 class="text-[24px] leading-[24px] text-[#04436F] font-[Metropolis] font-normal">
+  <strong class="font-bold">Standort:</strong> Schweiz (verschiedene Standorte möglich) 
+</h1>
+<h1 class="text-[24px] leading-[24px] text-[#04436F] font-[Metropolis] font-normal">
+  <strong class="font-bold">Arbeitsbeginn:</strong> Ab Sommer 2025 
+</h1>
+</div>
+
+<div className='mt-[16px]'>
+ <h2 class="text-[24px] leading-[24px] text-[#04436F] font-[Metropolis] font-bold">
+ Über uns:
+ </h2>
+ <p class="mt-1 text-[20px] leading-[24px] text-[#04436F] font-[Metropolis] font-normal">
+ Prime Home Care AG ist ein führender digitaler Anbieter von häuslicher Pflege und Betreuungsdiensten in der Schweiz. Wir sind bestrebt, qualitativ hochwertige Betreuung und Unterstützung für unsere Kunden zu bieten und ihre Lebensqualität zu verbessern. Wir suchen engagierte und einfühlsame Betreuungskräfte, die unser Team verstärken und unseren Kunden die bestmögliche Pflege bieten. 
+ </p>
+</div>
+
+<div className='mt-[16px]'>
+ <h2 class="text-[24px] leading-[24px] text-[#04436F] font-[Metropolis] font-bold">
+ Aufgaben und Verantwortlichkeiten:
+ </h2>
+  <ul class="mt-2 ml-1 list-disc text-[20px] leading-[24px] text-[#04436F] font-[Metropolis] font-normal pl-5">
+    <li>Durchführung von pflegerischen Tätigkeiten wie Körperpflege, Anziehen, Mobilisation und Unterstützung bei der Nahrungsaufnahme</li>
+    <li>Unterstützung bei hauswirtschaftlichen Tätigkeiten, wie Einkaufen, Kochen und Reinigen</li>
+    <li>Begleitung und Betreuung von Kunden bei Arztbesuchen und anderen Terminen</li>
+    <li>Förderung der Selbstständigkeit und des Wohlbefindens der Kunden</li>
+    <li>Dokumentation der erbrachten Leistungen und des Pflegeverlaufs</li>
+    <li>Enge Zusammenarbeit mit Angehörigen und anderen Pflegekräften</li>
+    <li>Einhaltung der Hygiene- und Sicherheitsstandards</li>
+  </ul>
+</div>
+
+
+<div className='mt-[16px]'>
+ <h2 class="text-[24px] leading-[24px] text-[#04436F] font-[Metropolis] font-bold">
+ Anforderungen:
+ </h2>
+  <ul class="mt-2 ml-1 list-disc text-[20px] leading-[24px] text-[#04436F] font-[Metropolis] font-normal pl-5">
+    <li>Berufserfahrung in der häuslichen Pflege von Vorteil </li>
+    <li>Abgeschlossener Pflegehelferkurs von Vorteil </li>
+    <li>Einfühlungsvermögen und Freude am Umgang mit Menschen</li>
+    <li>Zuverlässigkeit und Verantwortungsbewusstsein</li>
+    <li>Gute Kommunikations- und Organisationsfähigkeiten</li>
+    <li>Flexibilität und Bereitschaft zu stundenweisen Einsätzen</li>
+    <li>Gültiger Führerschein der Klasse B von Vorteil</li>
+    <li>Geübter Umgang mit digitalen Medien</li>
+  </ul>
+</div>
+
+<div className='mt-[16px]'>
+ <h2 class="text-[24px] leading-[24px] text-[#04436F] font-[Metropolis] font-bold">
+ Wir bieten:
+ </h2>
+  <ul class="mt-2 ml-1 list-disc text-[20px] leading-[24px] text-[#04436F] font-[Metropolis] font-normal pl-5">
+    <li>Eine sinnstiftende und erfüllende Tätigkeit in einem wachsenden Unternehmen</li>
+    <li>Attraktive Vergütung und Sozialleistungen</li>
+    <li>Eine Moderne Arbeitsumgebung und Innovative Unternehmenskultur</li>
+    <li>Möglichkeiten zur beruflichen Weiterentwicklung und Weiterbildung</li>
+    <li>Ein unterstützendes und kollegiales Arbeitsumfeld</li>
+    <li>Flexible Arbeitszeiten und die Möglichkeit zur Vereinbarkeit von Beruf und Privatleben</li>
+  </ul>
+</div>
+
+<div class="flex flex-col justify-center items-start self-stretch bg-white rounded-[20px] p-[20px] mt-[16px]">
+  <h1 class="text-[#04436F] text-center font-['Instrument Sans'] text-[44px] font-semibold leading-[52.8px]">
+    Bewerbung:
+  </h1>
+  <p class="text-[#04436F] font-['Inter'] text-[16px] font-normal leading-[25.6px] mt-[8px]">
+  Wenn Sie interessiert sind, Teil unseres engagierten Teams zu werden und einen wertvollen Beitrag zur Lebensqualität unserer Kunden zu leisten, bewerben Sie sich über unser online Portal 
+    <a href="https://www.phc.ch" class="text-[#04436F] underline"> www.phc.ch</a>.
+    Bewerbungsunterlagen, welche in physischer Form eingesendet werden, können weder berücksichtigt noch retourniert werden.
+  </p>
+  <h2 class="text-[#04436F] lg:text-center font-['Metropolis'] text-[24px] font-medium lg:leading-[52.8px] mt-[8px]">
+    Wir freuen uns auf Ihre Bewerbung.
+  </h2>
+</div>
+
+
+</section>
 
 <section
    className="lg:block hidden font-montserat rounded-[20px] max-w-[1290px] h-[280px] relative lg:flex flex-col items-center justify-center bg-cover md:mt-[160px]"
