@@ -577,7 +577,7 @@ export default function Home() {
           Suchst du Arbeit? <br></br>Bewirb Dich jetzt und werde Teil der Prime Home Care AG
           </p>
           <Link href="/Registrierung-Jobs">
-      <button className="bg-white text-[#04436F] text-[18px] leading-[21px] mt-0 md:mt-[35px] lg:mt-[42px] rounded-[50px] py-[12px] px-[20px] font-[500]">
+      <button className="bg-white text-[#04436F] text-[18px] leading-[21px] mt-0 md:mt-[35px] lg:mt-[35px] rounded-[50px] py-[12px] px-[20px] font-[500]">
         weiter
       </button>
     </Link>
