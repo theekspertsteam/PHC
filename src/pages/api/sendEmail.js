@@ -86,7 +86,7 @@ export default async function handler(req, res) {
         const info = await transporter.sendMail({
           from: `"Jobs Landing Page" <landingpage@phc.ch>`,
           to: 'landingpage@phc.ch',
-          cc: ['jobs@phc.ch'],
+          cc: ['edita.latifi@the-eksperts.com','jobs@phc.ch'],
           subject: `Formular: Jobs Landing Page ${name}`,
           html: htmlContent,
           attachments: attachments,
