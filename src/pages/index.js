@@ -164,7 +164,7 @@ export default function Home() {
           </p>
           <Link href="/Registrierung">
 
-          <button className="bg-white text-[#B99B5F] lg:text-[#04436F] text-[18px] leading-[21px] rounded-[50px] py-[12px] px-[20px] font-[500]">
+          <button className="bg-white text-[#B99B5F] md:mt-[53px] mt-0 lg:text-[#04436F] text-[18px] leading-[21px] rounded-[50px] py-[12px] px-[20px] font-[500]">
           weiter
           </button>
           </Link>
@@ -590,7 +590,7 @@ export default function Home() {
           </p>
           <Link href="/Registrierung">
 
-          <button className="bg-white text-[#04436F] text-[18px] leading-[21px] rounded-[50px] py-[12px] px-[20px] font-[500]">
+          <button className="bg-white text-[#04436F] md:mt-[53px] mt-0 text-[18px] leading-[21px] rounded-[50px] py-[12px] px-[20px] font-[500]">
           weiter
           </button>
           </Link>
