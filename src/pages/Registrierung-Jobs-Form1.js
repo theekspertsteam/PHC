@@ -9,6 +9,7 @@ export default function FormPage01() {
      return (
        formData.region &&
        formData.name &&
+       formData.vorname &&
        emailRegex.test(formData.email) &&
        formData.cv
      );
@@ -32,6 +33,7 @@ export default function FormPage01() {
       const formDataToSend = new FormData();
       formDataToSend.append("region", formData.region);
       formDataToSend.append("name", formData.name);
+      formDataToSend.append("vorname", formData.vorname);
       formDataToSend.append("email", formData.email);
       formDataToSend.append("questions", formData.questions);
   
@@ -180,7 +182,7 @@ Wähle deine gewünschte<br></br> Region in der du arbeiten<br></br> möchtest u
 >
   {/* Region */}
   <div
-    className="flex justify-between items-center w-[271px] h-[75px] px-[13px] py-[17px] border rounded-lg bg-white"
+    className="flex justify-between items-center w-[271px] lg:w-[200px] h-[75px] px-[13px] py-[17px] border rounded-lg bg-white"
     style={{
       border: "1px solid #B7B6BA",
       borderRadius: "8px",
@@ -232,13 +234,25 @@ Wähle deine gewünschte<br></br> Region in der du arbeiten<br></br> möchtest u
   type="text"
   placeholder="Name"
   required
-  className="w-[271px] h-[75px] px-[13px] py-[17px] border rounded-lg bg-white text-[#1C1B1D] font-metropolis text-[18px] leading-[26px] font-normal placeholder-[#1C1B1D]"
+  className="w-[271px] lg:w-[200px]  h-[75px] px-[13px] py-[17px] border rounded-lg bg-white text-[#1C1B1D] font-metropolis text-[18px] leading-[26px] font-normal placeholder-[#1C1B1D]"
   style={{
     border: "1px solid #B7B6BA",
     borderRadius: "8px",
   }}
   value={formData.name || ""}
   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+/>
+<input
+  type="text"
+  placeholder="Vorname"
+  required
+  className="w-[271px] lg:w-[200px] h-[75px] px-[13px] py-[17px] border rounded-lg bg-white text-[#1C1B1D] font-metropolis text-[18px] leading-[26px] font-normal placeholder-[#1C1B1D]"
+  style={{
+    border: "1px solid #B7B6BA",
+    borderRadius: "8px",
+  }}
+  value={formData.vorname || ""}
+  onChange={(e) => setFormData({ ...formData, vorname: e.target.value })}
 />
 
 
@@ -247,7 +261,7 @@ Wähle deine gewünschte<br></br> Region in der du arbeiten<br></br> möchtest u
     type="email"
     placeholder="E-Mail"
     required
-    className="w-[271px] h-[75px] px-[13px] py-[17px] border rounded-lg bg-white text-[#1C1B1D] font-metropolis text-[18px] leading-[26px] font-normal placeholder-[#1C1B1D]"
+    className="w-[271px] lg:w-[200px] h-[75px] px-[13px] py-[17px] border rounded-lg bg-white text-[#1C1B1D] font-metropolis text-[18px] leading-[26px] font-normal placeholder-[#1C1B1D]"
     style={{
       border: "1px solid #B7B6BA",
       borderRadius: "8px",
@@ -258,7 +272,7 @@ Wähle deine gewünschte<br></br> Region in der du arbeiten<br></br> möchtest u
           <label htmlFor="cv-upload" className="cursor-pointer">
 
 <div
-          className="flex flex-col justify-between items-start w-[271px] h-[75px] px-[13px] py-[17px] border rounded-lg bg-white"
+          className="flex flex-col justify-between items-start w-[271px] lg:w-[200px]  h-[75px] px-[13px] py-[17px] border rounded-lg bg-white"
           style={{
             border: "1px solid #B7B6BA",
             borderRadius: "8px",
