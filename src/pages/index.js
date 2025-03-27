@@ -147,7 +147,7 @@ export default function Home() {
       <div className="flex flex-col md:flex-row justify-center gap-6">
         {/* First Button */}
         <div className="flex md:flex-col justify-center items-center md:items-start bg-[#04436F] text-white md:w-[350px] lg:w-[608px] h-[193px] md:h-[400px] lg:h-[270px] rounded-[10px] md:rounded-[37px] px-[10px] py-[30px] md:px-[40px] md:py-[52px] gap-4">
-          <p className="text-[24px] md:text-[36px] font-[600] leading-[32px] md:leading-[52px]">
+          <p className="text-[24px] md:text-[34px] md:leading-[42px] lg:text-[36px] font-[600] leading-[32px] lg:leading-[52px]">
           Suchst du Arbeit? <br></br>Bewirb Dich jetzt und werde Teil der Prime Home Care AG
           </p>
           <Link href="/Registrierung-Jobs">
