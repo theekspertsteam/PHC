@@ -148,7 +148,7 @@ export default function Home() {
         {/* First Button */}
         <div className="flex md:flex-col justify-center items-center md:items-start bg-[#04436F] text-white md:w-[350px] lg:w-[608px] h-[193px] md:h-[400px] lg:h-[270px] rounded-[10px] md:rounded-[37px] px-[10px] py-[30px] md:px-[40px] md:py-[52px] gap-4">
           <p className="text-[24px] md:text-[36px] font-[600] leading-[32px] md:leading-[52px]">
-          Suchst du Arbeit? <br>Bewirb Dich jetzt und werde Teil der Prime Home Care AG
+          Suchst du Arbeit? <br></br>Bewirb Dich jetzt und werde Teil der Prime Home Care AG
           </p>
           <Link href="/Registrierung-Jobs">
       <button className="bg-white text-[#04436F] text-[18px] leading-[21px] rounded-[50px] flex justify-center items-center mt-0 md:mt-[35px] lg:mt-[42px] py-[12px] px-[20px] font-[500]">
@@ -574,7 +574,7 @@ export default function Home() {
         {/* First Button */}
         <div className="flex md:flex-col justify-center items-center md:items-start bg-[#04436F] text-white md:w-[350px] lg:w-[608px]  h-[193px] md:h-[400px] lg:h-[270px] rounded-[10px] md:rounded-[37px] px-[10px] py-[30px] md:px-[40px] md:py-[52px] gap-4">
           <p className="text-[24px] md:text-[36px] font-[600] leading-[32px] md:leading-[52px]">
-          Suchst du Arbeit? <br>Bewirb Dich jetzt und werde Teil der Prime Home Care AG
+          Suchst du Arbeit? <br></br>Bewirb Dich jetzt und werde Teil der Prime Home Care AG
           </p>
           <Link href="/Registrierung-Jobs">
       <button className="bg-white text-[#04436F] text-[18px] leading-[21px] mt-0 md:mt-[35px] lg:mt-[42px] rounded-[50px] py-[12px] px-[20px] font-[500]">
