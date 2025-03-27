@@ -21,10 +21,10 @@ export default async function handler(req, res) {
       console.log("Fields:", fields);
       console.log("Files:", files);
 
-      const { name, email, region, questions } = fields;
+      const { name, vorname, email, region, questions } = fields;
 
       // Validate required fields
-      if (!name || !email || !region || !questions) {
+      if (!name ||!vorname || !email || !region || !questions) {
         return res.status(400).json({ error: 'Missing required fields' });
       }
 
@@ -52,6 +52,10 @@ export default async function handler(req, res) {
               <tr>
                 <td style="padding: 10px; border: 1px solid #ddd;"><strong>Name:</strong></td>
                 <td style="padding: 10px; border: 1px solid #ddd;">${name}</td>
+              </tr>
+                 <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Vorname:</strong></td>
+                <td style="padding: 10px; border: 1px solid #ddd;">${vorname}</td>
               </tr>
               <tr>
                 <td style="padding: 10px; border: 1px solid #ddd;"><strong>Email:</strong></td>
@@ -103,4 +107,5 @@ export default async function handler(req, res) {
     res.status(405).json({ error: 'Method not allowed' });
   }
 }
+
 
