@@ -118,7 +118,7 @@ export default function Home() {
   {/* Text Content */}
   <div className="relative z-20 w-full max-w-[100%] flex flex-col justify-center items-center text-white">
     <p className="mt-[60px] mb-4 px-4 py-2 text-[18px] font-medium leading-[22px] bg-[linear-gradient(93deg,_#000_0%,_rgba(0,_0,_0,_0.30)_100%)] bg-opacity-50 rounded-[15px] max-w-[320px]">
-      Ab Frühsommer 2025 bietet die
+      Schon bald bietet die
     </p>
 
     <h2 className="text-[22px] font-semibold leading-[26px]">
@@ -479,7 +479,7 @@ export default function Home() {
       }}
     >
       <h2 className="text-center text-black text-[24px] lg:text-[44px] mt-[30px] font-[600] mb-[10px] lg:w-[894px]">
-      Ab Frühsommer 2025 sind wir für Sie da!
+      Schon bald sind wir für Sie da!
       </h2>
    
 
@@ -504,7 +504,7 @@ export default function Home() {
   }}
 >
   <h2 className="text-center text-black text-[24px] lg:text-[44px] mt-[30px] font-[600] mb-[10px] lg:w-[894px]">
-    Ab Frühsommer 2025 sind wir für Sie da!
+    Schon bald sind wir für Sie da!
   </h2>
 
   {/* Button Section */}
@@ -533,7 +533,7 @@ export default function Home() {
       lineHeight: '32px', // 100%
     }}
   >
-    Ab Frühsommer 2025 sind wir für Sie da!
+    Schon bald sind wir für Sie da!
   </h2>
 
   {/* Button Section */}
