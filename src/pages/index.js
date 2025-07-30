@@ -49,7 +49,7 @@ export default function Home() {
           <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-[#F1F1F1]">
           <div className="lg:w-[1069px] text-center">
             <p className=" mb-[20px] mt-[60px] flex justify-center items-center w-[350px] p-[4px_10px_4px_10px] text-[#F1F1F1] text-[20px] font-[400] leading-[25.6px] border-[1px] border-transparent rounded-[20px] bg-[linear-gradient(93deg,_#000_0%,_rgba(0,_0,_0,_0.30)_100%)] mx-auto">
-              Ab Frühsommer 2025 bietet die
+              Schon bald bietet die
             </p>
 
             <h2 className="md:block hidden mb-[5px] text-[24px] lg:text-[48px] font-[600] lg:leading-[52px]">
