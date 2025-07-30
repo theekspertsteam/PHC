@@ -53,7 +53,7 @@ export default function Home() {
                         borderRadius: "50px 0px 0px 50px",
                     }}
                     >
-                    Ab Frühsommer 2025
+                    Schon bald
                     </p>
 
                         <h2 className="mb-1 text-[24px] lg:text-[65px] font-[600] leading-[60px] ">
@@ -123,7 +123,7 @@ export default function Home() {
                         borderRadius: "50px 0px 0px 50px",
                     }}
                     >
-                    Ab Frühsommer 2025
+                    Schon bald
                     </p>
 
       <h2 className="lg:hidden block mb-[8px] text-[32px] leading-[32px] font-[600]">
@@ -161,7 +161,7 @@ export default function Home() {
       fontWeight: "600",
     }}
   >
-    Jetzt bewerben und ab Frühling 2025 loslegen!
+    Jetzt bewerben und schon bald loslegen!
   </h1>
 
   {/* Subheading */}
@@ -1560,7 +1560,7 @@ Werde Teil unseres Teams und gestalte <br></br> Betreuung neu.  </p>
       fontWeight: "600",
     }}
   >
-    Jetzt bewerben und ab Frühling 2025 loslegen!
+    Jetzt bewerben und schon bald loslegen!
   </h1>
 
   {/* Subheading */}
