@@ -69,7 +69,7 @@ export default function Home() {
     lineHeight: "25.6px", // 160%
   }}
 >
-  Ab Frühsommer 2025
+  Schon bald
 </p>
 
 
@@ -162,7 +162,7 @@ Flexible Betreuung –  Ihre Unterstützung genau wie<br></br> Sie sie brauchen!
                         background: "linear-gradient(93deg, #B99B5F 0%, rgba(185, 155, 95, 0.00) 100%)",
                     }}
                     >
-                    Ab Frühsommer 2025
+                    Schon bald
                     </p>
 
       <h2 className="lg:hidden block mb-[16px] text-[32px] leading-[32px] font-[600]">
