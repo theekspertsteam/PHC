@@ -5,6 +5,22 @@ import ServicesGrid from "./Servicesgrid";
 
 export default function FormPage01() {
   const { formData, setFormData } = useContext(FormContext);
+  const [emailError, setEmailError] = useState("");
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const handleEmailChange = (e) => {
+    const email = e.target.value;
+    setFormData({ ...formData, email });
+
+    if (!email.includes("@")) {
+      setEmailError("E-Mail muss ein '@' enthalten");
+    } else if (!emailRegex.test(email)) {
+      setEmailError("Bitte gültige E-Mail-Adresse eingeben");
+    } else {
+      setEmailError("");
+    }
+  };
 
   const handleValidation = () => {
     return formData.region && formData.name && formData.email;
@@ -54,7 +70,6 @@ export default function FormPage01() {
      useEffect(() => {
        setIsFormValid(validateForm());
      }, [formData]);
-     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
      const handleFileChange = (event) => {
        const file = event.target.files[0];
        if (file && file.type === "application/pdf") {
@@ -258,17 +273,17 @@ Wählen Sie die gewünschte <br></br>Region und geben Sie<br></br>Ihre E-Mail Ad
           value={formData.vorname}
           onChange={(e) => setFormData({ ...formData, vorname: e.target.value })}
         />
-        <input
-          type="email"
-          placeholder="E-Mail"
-          required
-          className="w-[271px] h-[75px] px-[13px] py-[17px]  border border-[#B7B6BA] rounded-lg bg-white text-[#1C1B1D] text-[18px] placeholder-[#1C1B1D]"
-          style={{
-            fontFamily: "Metropolis",
-          }}
-          value={formData.email}
-          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-        />
+       <input
+        type="email"
+        placeholder="E-Mail"
+        required
+        className="w-[271px] h-[75px] px-[13px] py-[17px] border border-[#B7B6BA] rounded-lg bg-white text-[#1C1B1D] text-[18px] placeholder-[#1C1B1D]"
+        style={{ fontFamily: "Metropolis" }}
+        value={formData.email}
+        onChange={handleEmailChange}
+      />
+      {emailError && <p className="text-red-600 text-sm mt-1">{emailError}</p>}
+    </>
       </div>
       <h2
         className="text-center text-[#B99B5F] lg:block hidden font-[700] text-[24px] leading-[30px] lg:text-[48px] lg:leading-[55px] mb-2 mt-[160px]"
