@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, { useState, useContext, useEffect } from "react";
 import { FormContext } from "../context/FormContext";
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function FormPage01() {
   const { formData, setFormData } = useContext(FormContext);
@@ -17,7 +18,6 @@ export default function FormPage01() {
    useEffect(() => {
      setIsFormValid(validateForm());
    }, [formData]);
-   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
    const handleFileChange = (event) => {
      const file = event.target.files[0];
      if (file && file.type === "application/pdf") {
@@ -29,6 +29,10 @@ export default function FormPage01() {
    const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleClick = async () => {
+      if (!isFormValid) {
+    alert("Bitte füllen Sie alle erforderlichen Felder korrekt aus.");
+    return;
+  }
     try {
       const formDataToSend = new FormData();
       formDataToSend.append("region", formData.region);
@@ -262,19 +266,19 @@ Wähle deine gewünschte<br></br> Region in der du arbeiten<br></br> möchtest u
 
   {/* E-Mail */}
 <input
-  type="email"
-  placeholder="E-Mail"
-  required
-  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-  title="Bitte geben Sie eine gültige E-Mail-Adresse ein (z.B. name@example.com)"
-  className="w-[271px] lg:w-[200px] h-[75px] px-[13px] py-[17px] border rounded-lg bg-white text-[#1C1B1D] font-metropolis text-[18px] leading-[26px] font-normal placeholder-[#1C1B1D]"
-  style={{
-    border: "1px solid #B7B6BA",
-    borderRadius: "8px",
-  }}
-  value={formData.email || ""}
-  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-/>
+    type="email"
+    placeholder="E-Mail"
+    required
+  pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+
+    className="w-[271px] lg:w-[200px] h-[75px] px-[13px] py-[17px] border rounded-lg bg-white text-[#1C1B1D] font-metropolis text-[18px] leading-[26px] font-normal placeholder-[#1C1B1D]"
+    style={{
+      border: "1px solid #B7B6BA",
+      borderRadius: "8px",
+    }}
+    value={formData.email || ""}
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+  />
 
           <label htmlFor="cv-upload" className="cursor-pointer">
 
