@@ -230,7 +230,7 @@ Wähle deine gewünschte<br></br> Region in der du arbeiten<br></br> möchtest u
   </div>
 
   {/* Name */}
-  <input
+<input
   type="text"
   placeholder="Name"
   required
@@ -240,8 +240,12 @@ Wähle deine gewünschte<br></br> Region in der du arbeiten<br></br> möchtest u
     borderRadius: "8px",
   }}
   value={formData.name || ""}
-  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+  onChange={(e) => {
+    const onlyText = e.target.value.replace(/[0-9]/g, "");
+    setFormData({ ...formData, name: onlyText });
+  }}
 />
+
 <input
   type="text"
   placeholder="Vorname"
