@@ -21,10 +21,10 @@ export default async function handler(req, res) {
       console.log("Fields:", fields);
       console.log("Files:", files);
 
-      const { name, vorname, email, region, selectedTopics, additionalQuestion } = fields;
+      const { name, email, region, selectedTopics, additionalQuestion } = fields;
 
       // Validate required fields
-      if (!name || !vorname || !email || !region) {
+      if (!name || !email || !region) {
         return res.status(400).json({ error: 'Missing required fields' });
       }
 
@@ -51,10 +51,6 @@ export default async function handler(req, res) {
             <tr>
               <td style="padding: 10px; border: 1px solid #ddd;"><strong>Name:</strong></td>
               <td style="padding: 10px; border: 1px solid #ddd;">${name}</td>
-            </tr>
-            <tr>
-              <td style="padding: 10px; border: 1px solid #ddd;"><strong>Vorname:</strong></td>
-              <td style="padding: 10px; border: 1px solid #ddd;">${vorname}</td>
             </tr>
             <tr>
               <td style="padding: 10px; border: 1px solid #ddd;"><strong>Email:</strong></td>
@@ -85,6 +81,7 @@ export default async function handler(req, res) {
         const info = await transporter.sendMail({
           from: `"Kunden Landing Page" <landingpage@phc.ch>`,
           to: 'info@phc.ch',
+          cc: ['edita.latifi@the-eksperts.com'],
           subject: `Formular: Kunden Landing Page ${name}`,
           html: htmlContent,
           attachments: attachments, // Attach the CV if present
