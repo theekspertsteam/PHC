@@ -5,22 +5,16 @@ import ServicesGrid from "./Servicesgrid";
 
 export default function FormPage01() {
   const { formData, setFormData } = useContext(FormContext);
-  const [emailError, setEmailError] = useState("");
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  const handleEmailChange = (e) => {
-    const email = e.target.value;
-    setFormData({ ...formData, email });
-
-    if (!email.includes("@")) {
-      setEmailError("E-Mail muss ein '@' enthalten");
-    } else if (!emailRegex.test(email)) {
-      setEmailError("Bitte gültige E-Mail-Adresse eingeben");
-    } else {
-      setEmailError("");
-    }
-  };
+const validateForm = () => {
+  return (
+    formData.region &&
+    formData.name &&
+    emailRegex.test(formData.email) &&
+    formData.cv
+  );
+};
 
   const handleValidation = () => {
     return formData.region && formData.name && formData.email;
@@ -34,39 +28,36 @@ export default function FormPage01() {
   };
 
    const [isSubmitted, setIsSubmitted] = useState(false);
-    
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
       const handleInputChange = (e) => {
         setFormData({ ...formData, additionalQuestion: e.target.value }); // Ruaj pyetjen shtesë
       };
     
-      const handleClick = async () => {
-        try {
-          const response = await fetch("/api/send3-4email", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData), // Dërgo të dhënat e formës në API
-          });
-    
-          if (response.ok) {
-            setIsSubmitted(true);
-          } else {
-            console.error("Error submitting form");
-          }
-        } catch (error) {
-          console.error("Error:", error);
-        }
-      };
+const handleClick = async () => {
+  if (isSubmitting) return; // 🚫 already sending
+  setIsSubmitting(true);
 
+  try {
+    const response = await fetch("/api/send3-4email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      setIsSubmitted(true);
+    } else {
+      console.error("Error submitting form");
+    }
+  } catch (error) {
+    console.error("Error:", error);
+  } finally {
+    setIsSubmitting(false);
+  }
+};
    const [isFormValid, setIsFormValid] = useState(false);
-     const validateForm = () => {
-       return (
-         formData.region &&
-         formData.name &&
-         formData.vorname &&
-         emailRegex.test(formData.email) &&
-         formData.cv
-       );
-     };
+
      useEffect(() => {
        setIsFormValid(validateForm());
      }, [formData]);
@@ -80,7 +71,7 @@ export default function FormPage01() {
      };
   return (
 
-    <div className="bg-[#FAFCFF] text-[#B99B5F] min-h-screen p-4">
+    <div className="bg-[#F1F1F1] text-[#B99B5F] min-h-screen p-4">
       {/* Section 1: Logo and Zuruk */}
       <section className="lg:block hidden lg:flex justify-center items-center pt-[25px] md:pt-[25px]">
         <div className="absolute top-6 left-4 lg:left-[170px]">
@@ -262,28 +253,19 @@ Wählen Sie die gewünschte <br></br>Region und geben Sie<br></br>Ihre E-Mail Ad
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         />
-          <input
-          type="text"
-          placeholder="Vorname"
+        <div>
+        <input
+          type="email"
+          placeholder="E-Mail"
           required
-          className="w-[271px] h-[75px] px-[13px] py-[17px] text-[18px] border border-[#B7B6BA] rounded-lg bg-white text-[#1C1B1D]  placeholder-[#1C1B1D]"
+          className="w-[271px] h-[75px] px-[13px] py-[17px]  border border-[#B7B6BA] rounded-lg bg-white text-[#1C1B1D] text-[18px] placeholder-[#1C1B1D]"
           style={{
             fontFamily: "Metropolis",
           }}
-          value={formData.vorname}
-          onChange={(e) => setFormData({ ...formData, vorname: e.target.value })}
+          value={formData.email}
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
         />
-       <input
-        type="email"
-        placeholder="E-Mail"
-        required
-        className="w-[271px] h-[75px] px-[13px] py-[17px] border border-[#B7B6BA] rounded-lg bg-white text-[#1C1B1D] text-[18px] placeholder-[#1C1B1D]"
-        style={{ fontFamily: "Metropolis" }}
-        value={formData.email}
-        onChange={handleEmailChange}
-      />
-      {emailError && <p className="text-red-600 text-sm mt-1">{emailError}</p>}
-    </>
+        </div>
       </div>
       <h2
         className="text-center text-[#B99B5F] lg:block hidden font-[700] text-[24px] leading-[30px] lg:text-[48px] lg:leading-[55px] mb-2 mt-[160px]"
@@ -328,13 +310,17 @@ Wählen Sie die gewünschte <br></br>Region und geben Sie<br></br>Ihre E-Mail Ad
         <div className="flex justify-center mt-10">
 
         {!isSubmitted ? (
-        <button
-          type="button"
-          className="bg-[#B99B5F] text-[#F5F5F5] font-metropolis font-bold text-[24px] lg:text-[20px] leading-[21.6px] rounded-[8px] lg:rounded-full px-8 py-4"
-          onClick={handleClick} // Trigger state change on click
-        >
-          Senden
-        </button>
+      <button
+  type="button"
+  disabled={isSubmitting}
+  className={`bg-[#B99B5F] text-[#F5F5F5] font-metropolis font-bold 
+              text-[24px] lg:text-[20px] rounded-[8px] lg:rounded-full px-8 py-4 
+              ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
+  onClick={handleClick}
+>
+  {isSubmitting ? "Wird gesendet..." : "Senden"}
+</button>
+
       ) : (
         <p className="text-[ #B99B5F] font-metropolis font-[500] lg:font-[500] text-[24px] lg:text-[45px] leading-[26.2px] mt-[50px] lg:leading-[50.2px] text-center">
           Vielen Dank - Wir melden uns so schnell wie möglich!
@@ -347,3 +333,4 @@ Wählen Sie die gewünschte <br></br>Region und geben Sie<br></br>Ihre E-Mail Ad
     </div>
   );
 }
+
